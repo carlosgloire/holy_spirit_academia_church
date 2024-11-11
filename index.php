@@ -149,21 +149,14 @@
 </section>
 
 
+
 <?php
 require_once('database/db.php');
 
-if ($db) {
-    // Récupération des sermons depuis la base de données
-    $stmt = $db->prepare("SELECT SUBSTRING(description, 1, 150) as short_desc, title, sermon_id,audio,video FROM sermons ORDER BY sermon_id DESC");
-    $stmt->execute();
-    $sermons = $stmt->fetchAll(PDO::FETCH_ASSOC);
-} else {
-    echo "Database is not available.";
-}
-
-
-
-
+// Récupération des sermons depuis la base de données
+$stmt = $db->prepare("SELECT SUBSTRING(description, 1, 150) as short_desc, title, sermon_id,audio,video FROM sermons ORDER BY sermon_id DESC");
+$stmt->execute();
+$sermons = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!-- Section Sermons -->
