@@ -1,12 +1,17 @@
 <?php
+// Database connection settings
+$host = 'holy_spirit_academia_church_hsac'; // Internal Host from your credentials
+$dbname = 'holy_spirit_academia_church';    // Database Name
+$username = 'mysql';                        // User
+$password = 'hsac@_230';                    // Password
+
 try {
-    $db = new PDO("mysql:host=82.112.225.123;port=3306;dbname=holy_spirit_academia_church", "mysql", "hsac@_230", 
-    [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    // Create a PDO instance
+    $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    // Set error mode to exception for better error handling
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    // Attempt to write to a temporary error log if permission issues persist
-    error_log("Database connection error: " . $e->getMessage(), 3, "/tmp/error_log.txt");
-    echo 'Connection failed: Check error log for details';
-    // Optional: set $db to null if connection fails
-    $db = null;
+    // Output connection error message
+    echo "Connection failed: " . $e->getMessage();
+    $db = null; // Set $db to null if connection fails
 }
-?>
