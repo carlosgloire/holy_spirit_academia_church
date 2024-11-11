@@ -32,8 +32,7 @@
             <div class="list">
                 <div class="list-details">
                     <a class="home" href="#">Accueil</a>
-                    <a href="pages/about.php               
-">À propos</a>
+                    <a href="pages/about.php">À propos</a>
                     <a href="pages/services.php">Services & Horaires</a>
                     <a href="pages/event.php">Evénements</a>
                     <a href="pages/blog.php">Blog</a>
@@ -153,18 +152,18 @@
 <?php
 require_once('database/db.php');
 
-// Récupération des sermons depuis la base de données
-$stmt = $db->prepare("SELECT * FROM sermons");
-$stmt->execute();
-$sermons = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
-<?php
-require_once('database/db.php');
+if ($db) {
+    // Récupération des sermons depuis la base de données
+    $stmt = $db->prepare("SELECT SUBSTRING(description, 1, 150) as short_desc, title, sermon_id,audio,video FROM sermons ORDER BY sermon_id DESC");
+    $stmt->execute();
+    $sermons = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} else {
+    echo "Database is not available.";
+}
 
-// Récupération des sermons depuis la base de données
-$stmt = $db->prepare("SELECT SUBSTRING(description, 1, 150) as short_desc, title, sermon_id,audio,video FROM sermons ORDER BY sermon_id DESC");
-$stmt->execute();
-$sermons = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+
 ?>
 
 <!-- Section Sermons -->
