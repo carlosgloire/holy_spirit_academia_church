@@ -3,7 +3,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require_once('../mail/vendor/autoload.php');
+require __DIR__ . "/vendor/autoload.php";
 
 $mail = new PHPMailer(true);
 //$mail->SMTPDebug = SMTP::DEBUG_SERVER; // Enable verbose debug output
