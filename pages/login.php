@@ -40,7 +40,7 @@
                 <div class="all-inputs passwo">
                     <div class="pass">
                         <i class="bi bi-key"></i>
-                        <input style="width:100%" class="password" name="password" type="password" placeholder="Entrer le mot de passe" value="<?=isset($password)?$password:""?>">
+                        <input style="width:100%" class="password" name="password" type="password" placeholder="Entrer le mot de passe" >
                     </div>
                     <div class="eyes">
                         <i class="bi bi-eye  close hidden"></i>

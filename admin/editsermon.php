@@ -1,6 +1,6 @@
 <?php
-    require_once('../controllers/edit_sermon.php');
     session_start();
+    require_once('../controllers/edit_sermon.php');
     require('../database/db.php');
     require_once('../controllers/functions.php');
     notconnected();

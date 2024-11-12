@@ -1,6 +1,6 @@
 <?php 
+       session_start();
     require_once('../controllers/add_photo.php');
-    session_start();
     require('../database/db.php');
     require_once('../controllers/functions.php');
     notconnected();

@@ -1,6 +1,6 @@
 <?php
-    require_once('../controllers/add_article.php');
     session_start();
+    require_once('../controllers/add_article.php');
     require('../database/db.php');
     require_once('../controllers/functions.php');
     notconnected();
