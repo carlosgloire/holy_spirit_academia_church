@@ -1,9 +1,9 @@
 <?php
 
-$host = "holy_spirit_academia_church_hsac"; // Internal Host from your credentials
-$dbname = "holy_spirit_academia_church";    // Database Name
-$username = "mysql";                        // User
-$password = "hsac@_230";                    // Password
+$host = "82.112.255.123"; 
+$dbname = "holy_spirit_academia_church"; 
+$username = "gloire";                     
+$password = "Pat102030@@#";                 
 
 $mysqli = new mysqli(
     hostname: $host,
