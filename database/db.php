@@ -2,8 +2,8 @@
 // Database connection settings
 $host = 'holy_spirit_academia_church_hsac'; // Internal Host from your credentials
 $dbname = 'holy_spirit_academia_church';    // Database Name
-$username = 'mysql';                        // User
-$password = 'hsac@_230';                    // Password
+$username = 'gloire';                        // User
+$password = 'Pat102030@@#';                    // Password
 
 try {
     // Create a PDO instance
