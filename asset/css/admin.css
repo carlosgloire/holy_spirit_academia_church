@@ -74,7 +74,10 @@
     justify-content: center;
     margin-top: 20px;
 }
-
+.second-bloc{
+    margin-left: 20px ;
+    margin-right: 20px;
+}
 /* ------------------------- /
 #
 / ------------------------- */
@@ -498,6 +501,12 @@ button{
     .admin-section {
         display: grid;
         grid-template-columns: 0% auto;
+    }
+}
+@media screen and (max-width: 700px){
+    .blog-details{
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 @media screen and (max-width: 600px){

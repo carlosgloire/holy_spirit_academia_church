@@ -27,6 +27,7 @@
         <div class="login">
             <h2>Mot de passe oublié</h2>
             <form action="" method="post">
+                <p style="text-align: center;padding:10px">Pour réinitialiser votre mot de passe, veuillez saisir votre <br> adresse e-mail  dans le champ prévu à cet effet.</p>
                 <div class="all-inputs">
                     <i class="bi bi-envelope"></i>
                     <input style="width: 100%;" type="email" name="email" placeholder="Entrez votre email">

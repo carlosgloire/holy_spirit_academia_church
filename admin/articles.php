@@ -87,7 +87,7 @@
                     echo '<div class="blog-details">';
                     foreach ($articles as $article) {
                         ?>
-                        <div style="margin-left: 20px;" class="blog-item">
+                        <div  class="blog-item">
                             <h3><?= $article['title'] ?></h3>
                             <p><?= nl2br($article['short_desc'] )?>...</p>
                             <div>

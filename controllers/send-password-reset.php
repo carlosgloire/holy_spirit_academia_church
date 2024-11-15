@@ -4,7 +4,7 @@ $error = null;
 $success = null;
 
 // Include the database connection
-$mysqli = require(__DIR__ . "/mail/database.php");
+$mysqli = require(__DIR__ . "/../mail/database.php");
 
 if (isset($_POST['send'])) {
     if (isset($_POST['email'])) {
@@ -36,7 +36,7 @@ if (isset($_POST['send'])) {
 
             if ($mysqli->affected_rows) {
                 // Load PHPMailer
-                $mail = require __DIR__ . "/mail/mailer.php";
+                $mail = require __DIR__ . "/../mail/mailer.php";
 
                 // Configure the mail sender and receiver
                 $mail->setFrom("noreply@example.com", "HOLY SPIRIT ACADEMIA CHURCH");

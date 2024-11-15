@@ -1,10 +1,17 @@
 <?php
+
 // Database connection settings
 $host = 'localhost:3306'; 
 $dbname = 'holy_spirit_academia_church';
 $username = 'gloire';                       
 $password = 'Pat102030@@#';
-
+/*
+// Database connection settings
+$host = 'localhost'; 
+$dbname = 'hsac';
+$username = 'root';                       
+$password = '';
+*/
 try {
     // Create a PDO instance
     $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
