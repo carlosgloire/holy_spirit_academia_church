@@ -1,6 +1,4 @@
-<?php
- require_once('../controllers/contact_us.php');
-?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
