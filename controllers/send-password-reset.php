@@ -47,7 +47,6 @@ if (isset($_POST['send'])) {
                 // Generate the token URL
                 $token_url = "https://hollyspiritacademiachurch.com/pages/reset-password.php?token=$token";
 
-                // Email body
                 $mail->Body = <<<END
                 <html>
                 <head>
