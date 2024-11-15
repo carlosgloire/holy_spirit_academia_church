@@ -15,7 +15,7 @@ if (isset($_POST['send'])) {
         } elseif (!filter_var($sender_email, FILTER_VALIDATE_EMAIL)) {
             $error = "Votre email est incorrect.";
         } else {
-            $mail = require __DIR__ . "/mail/mailer.php";
+            $mail = require __DIR__ . "/../mail/mailer.php";
             $mail->setFrom($sender_email, $noms); // Définit l'expéditeur à l'email saisi dans le formulaire
             $mail->Subject = html_entity_decode($subject); // Décode les entités HTML dans le sujet
             $mail->CharSet = 'UTF-8'; // Définit l'encodage à UTF-8

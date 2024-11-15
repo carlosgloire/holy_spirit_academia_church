@@ -1,5 +1,7 @@
 <?php
- require_once('../controllers/contact_us.php');
+    $error = null;
+    $success = null;
+    require_once('../controllers/contact_us.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr">
