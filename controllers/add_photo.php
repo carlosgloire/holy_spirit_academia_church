@@ -15,9 +15,7 @@ if (isset($_POST['add'])) {
         $error = "Veuillez choisir une image";
     } elseif (!preg_match($pattern, $_FILES['uploadfile']['name']) && !empty($_FILES['uploadfile']['name'])) {
         $error = "Votre fichier doit être au format \"jpg, jpeg ou png\"";
-    } elseif ($filesize > 2000000) {
-        $error = "Votre fichier ne doit pas dépasser 2Mo";
-    } else {
+    }  else {
         // Vérifier si une image existe déjà
         $existing_product_query = $db->prepare("SELECT * FROM gallery_photo WHERE photo=:photo");
         $existing_product_query->execute(array('photo' => $filename));
