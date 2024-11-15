@@ -1,7 +1,7 @@
 <?php
 $error = null;
 $success = null;
-$mysqli = require(__DIR__ . "/mail/database.php"); // appel à la base de données
+$mysqli = require(__DIR__ . "/../mail/database.php"); 
 
 if (isset($_POST['send'])) {
     if (isset($_POST['message']) && isset($_POST['subject']) && isset($_POST['email']) && isset($_POST['noms'])) {
